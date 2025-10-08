@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - August</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        nav a.active {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 2rem 60px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .page-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 2rem;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .skill-item h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-item p {
+            color: #666;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 80px 2rem;
+            background: white;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+        }
+
+        .timeline-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .date {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item p {
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .page-header h2 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>August</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h2>About Me</h2>
+        <p>Get to know more about my background, skills, and experience</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a dedicated professional with a passion for creating exceptional work that makes a difference. With years of experience in my field, I bring expertise, creativity, and commitment to every project I undertake.</p>
+                    <p>My approach combines strategic thinking with hands-on execution, ensuring that every deliverable meets the highest standards of quality and excellence. I believe in continuous learning and staying ahead of industry trends to provide innovative solutions.</p>
+                    <p>Throughout my career, I have had the privilege of working on diverse projects that have challenged me to grow and develop new skills. I take pride in my ability to adapt to changing environments and deliver results that exceed expectations.</p>
+                </div>
+                <div class="about-image">
+                    👤
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Skills & Expertise</h2>
+            <div class="skills">
+                <div class="skill-item">
+                    <h4>Strategic Planning</h4>
+                    <p>Developing comprehensive strategies aligned with business goals and market opportunities.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Project Management</h4>
+                    <p>Leading cross-functional teams to successful outcomes with efficient resource management.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Problem Solving</h4>
+                    <p>Identifying complex challenges and implementing creative, effective solutions.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Communication</h4>
+                    <p>Clear and effective stakeholder engagement across all organizational levels.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Leadership</h4>
+                    <p>Inspiring and guiding teams to achieve their full potential and deliver excellence.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Innovation</h4>
+                    <p>Driving creative thinking and implementing cutting-edge solutions to challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Senior Professional</h3>
+                    <div class="date">2020 - Present</div>
+                    <p>Leading strategic initiatives and managing high-impact projects that drive organizational growth and innovation. Responsible for team leadership, stakeholder management, and delivering exceptional results.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Professional Specialist</h3>
+                    <div class="date">2017 - 2020</div>
+                    <p>Developed and implemented comprehensive solutions for complex business challenges. Collaborated with cross-functional teams to deliver projects on time and within budget.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Associate Professional</h3>
+                    <div class="date">2015 - 2017</div>
+                    <p>Supported senior team members in project execution and contributed to strategic planning initiatives. Gained valuable experience in various aspects of the business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 August. All rights reserved.</p>
+    </footer>
+</body>
+</html>
